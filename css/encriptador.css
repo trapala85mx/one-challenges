@@ -1,0 +1,173 @@
+:root {
+    --main_background: #f3f5fc;
+    --main_width: 50%;
+    --main_screen_width: 1920;
+    --main_screen_height: 1080px;
+}
+
+body {
+    background-color: var(--main_background);
+    height: var(--main_screen_height);
+    width: var(--main_screen_width);
+}
+
+.container {
+    width: 80%;
+    height: 60%;
+    margin: 2.5% 10%;
+    
+    display:grid;
+    grid-template-areas: "logo logo logo imagen"
+                         "encr encr encr imagen"
+                         "encr encr encr imagen"
+                         "encr encr encr imagen" 
+                         "encr encr encr imagen"
+                         "encr encr encr imagen"
+                         "encr encr encr imagen"
+                         "encr encr encr imagen"
+                         "encr encr encr imagen"
+                         "botn botn botn imagen"
+                         "botn botn botn imagen"
+                         "foot foot foot foot";
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.logo img {
+    height: 70%;
+}
+
+.encrypt-decrypt-section {
+    grid-area: encr;
+}
+
+.encrypt-decrypt-section textarea {
+    border: 0;
+    width: 90%;
+    height: 100%;
+    background-color: var(--main_background);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    padding-left: 5%;
+    resize: none;
+}
+
+.encrypt-decrypt-section p{
+    margin: 0 12%;
+    color: #495057;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 150%;
+}
+.aside {
+    /*grid-column: imagen;
+    grid-row: imagen*/
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main_background);
+    /*background-color: #0A3871;*/
+    position: relative;
+}
+
+.aside textarea {
+    width: 50%;
+    height: 80%;
+    background-color: var(--main_background);
+    border: 0;
+    border-radius: 36px;
+    background-image: url(../img/img_desencriptar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    resize: none;
+    position: relative;
+    left: 16%;
+    top: 2%;
+    
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 150%;
+    padding: 2em 2em;
+}
+
+.aside #copiar {
+    position: absolute;
+    width: 40%;
+    bottom: 5%;
+    right: 31%;
+    padding: 1em;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    visibility: hidden;
+    
+}
+
+.buttons {
+    grid-area: botn;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+#encriptar {
+    margin-right: 10em;
+    height: 5em;
+    width: 25%;
+    background-color: #0A3871;
+    box-shadow: none;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#encriptar:hover{
+    background-color: #D8DFE8;
+    color: black;
+    height: 5.5em;
+}
+
+#desencriptar {
+    margin-left: 10em;
+    height: 5em;
+    width: 25%;
+    background-color: #D8DFE8;
+    box-shadow: none;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#desencriptar:hover{
+    background-color: #0A3871;
+    color: white;
+    height: 5.5em;
+}
+
+.footer {
+    width: 80%;
+    grid-area: foot;
+    margin: 2.5% 10%;
+    text-align: center;
+    
+}
+
+.footer p {
+    margin: 0 0 0.5em 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
